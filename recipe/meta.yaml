@@ -1,16 +1,14 @@
 {% set name = "coveralls" %}
-{% set version = "1.1" %}
-{% set hash_type = "sha256" %}
-{% set hash = "34160385c13b0c43691ab11c080d4b10dabe3280fc0b2173c731efc5db836808" %}
+{% set version = "1.2.0" %}
+{% set git_url = "https://github.com/coveralls-clients/coveralls-python" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  git_rev: {{ version }}
+  git_url: {{ git_url }}
 
 build:
   number: 0
@@ -34,17 +32,18 @@ test:
     - coveralls --help
 
 about:
-  home: https://github.com/coagulant/coveralls-python
+  home: {{ git_url }}
   license: MIT
   license_family: MIT
-  license_file: LICENCE  # Yes it is a typo, will be fixed in the next release
+  license_file: LICENSE.txt
   summary: Show coverage stats online via coveralls.io
   description: |
-    Coveralls.io is service to publish your coverage stats online with a lot
-    of nice features. This package provides seamless integration with
-    coverage.py in your python projects.
-  dev_url: https://github.com/coagulant/coveralls-python
+    coveralls.io is a service for publishing your coverage stats online. This
+    package provides seamless integration with coverage.py (and thus py.test,
+    nosetests, etc...) in your Python projects.
+  dev_url: {{ git_url }}
 
 extra:
   recipe-maintainers:
     - goanpeca
+    - thekevjames
