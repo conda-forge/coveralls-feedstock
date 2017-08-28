@@ -17,6 +17,7 @@ build:
 
 requirements:
   build:
+    - pytest-runner
     - python
     - setuptools
   run:
