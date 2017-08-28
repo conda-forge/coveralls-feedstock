@@ -1,7 +1,7 @@
 About coveralls
 ===============
 
-Home: https://github.com/coagulant/coveralls-python
+Home: https://github.com/coveralls-clients/coveralls-python
 
 Package license: MIT
 
@@ -9,9 +9,9 @@ Feedstock license: BSD 3-Clause
 
 Summary: Show coverage stats online via coveralls.io
 
-Coveralls.io is service to publish your coverage stats online with a lot
-of nice features. This package provides seamless integration with
-coverage.py in your python projects.
+coveralls.io is a service for publishing your coverage stats online. This
+package provides seamless integration with coverage.py (and thus py.test,
+nosetests, etc...) in your Python projects.
 
 
 Current build status
