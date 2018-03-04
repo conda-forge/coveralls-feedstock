@@ -26,6 +26,7 @@ requirements:
     - python
     - pyyaml >=3.10
     - requests >=1.0.0
+    - urllib3
 
 test:
   commands:
