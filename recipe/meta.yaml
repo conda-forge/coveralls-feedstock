@@ -10,13 +10,15 @@ source:
   sha256: 664794748d2e5673e347ec476159a9d87f43e0d2d44950e98ed0e27b98da8346
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - coveralls = coveralls.cli:main
 
 requirements:
-  build:
+  host:
+    - pip
     - pytest-runner
     - python
     - setuptools
