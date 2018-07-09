@@ -17,14 +17,15 @@ nosetests, etc...) in your Python projects.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/coveralls-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/coveralls-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/coveralls-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/coveralls-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/coveralls-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/coveralls-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/coveralls-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/coveralls-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/coveralls/badges/version.svg)](https://anaconda.org/conda-forge/coveralls)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/coveralls/badges/downloads.svg)](https://anaconda.org/conda-forge/coveralls)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-coveralls-green.svg)](https://anaconda.org/conda-forge/coveralls) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/coveralls.svg)](https://anaconda.org/conda-forge/coveralls) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/coveralls.svg)](https://anaconda.org/conda-forge/coveralls) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/coveralls.svg)](https://anaconda.org/conda-forge/coveralls) |
 
 Installing coveralls
 ====================
