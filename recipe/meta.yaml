@@ -1,5 +1,5 @@
 {% set name = "coveralls" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5e50b73b980d89308816b597e3e7bdeb0adedf831585d5c4ac967d576f8925d
+  sha256: d3d49234bffd41e91b241a69f0ebb9f64d7f0515711a76134d53d4647e7eb509
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - python
     - setuptools
   run:
-    - coverage >=3.6
+    - coverage >=3.6, <5.0
     - docopt >=0.6.1
     - python
     - pyyaml >=3.10
