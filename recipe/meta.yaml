@@ -1,5 +1,5 @@
 {% set name = "coveralls" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2da39aeaef986757653f0a442ba2bef22a8ec602c8bacbc69d39f468dfae12ec
+  sha256: b4b21b15f4a5297794b5393cc40f720ef70c50f20772325d26965d96000ce0ca
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - coverage >=3.6, <6.0
     - docopt >=0.6.1
     - python
-    - pyyaml >=3.10
+    - pyyaml >=3.10, <5.3
     - requests >=1.0.0
     - urllib3
 
