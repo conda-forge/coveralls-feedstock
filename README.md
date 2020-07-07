@@ -5,7 +5,7 @@ Home: https://github.com/coveralls-clients/coveralls-python
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Show coverage stats online via coveralls.io
 
