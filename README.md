@@ -5,9 +5,11 @@ Home: https://github.com/coveralls-clients/coveralls-python
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/coveralls-feedstock/blob/master/LICENSE.txt)
 
 Summary: Show coverage stats online via coveralls.io
+
+Development: https://github.com/coveralls-clients/coveralls-python
 
 coveralls.io is a service for publishing your coverage stats online. This
 package provides seamless integration with coverage.py (and thus py.test,
