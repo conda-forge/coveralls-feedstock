@@ -1,5 +1,5 @@
 {% set name = "coveralls" %}
-{% set version = "3.3.0" %}
+{% set version = "3.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4508b8f18344b421a736a276b813daddfdbbe45928c3f878fa72bf54442ea641
+  sha256: b32a8bb5d2df585207c119d6c01567b81fba690c9c10a753bfe27a335bfc43ea
 
 build:
   noarch: python
