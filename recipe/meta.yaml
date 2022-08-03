@@ -34,7 +34,7 @@ about:
   home: https://github.com/coveralls-clients/coveralls-python
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENCE
   summary: Show coverage stats online via coveralls.io
   description: |
     coveralls.io is a service for publishing your coverage stats online. This
