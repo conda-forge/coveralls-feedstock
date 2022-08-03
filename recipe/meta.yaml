@@ -1,5 +1,5 @@
 {% set name = "coveralls" %}
-{% set version = "3.3.1" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b32a8bb5d2df585207c119d6c01567b81fba690c9c10a753bfe27a335bfc43ea
+  sha256: 34160385c13b0c43691ab11c080d4b10dabe3280fc0b2173c731efc5db836808
 
 build:
   noarch: python
@@ -20,12 +20,10 @@ requirements:
   host:
     - pip
     - python >=3.5
-    - setuptools
   run:
-    - coverage >=4.1, <7.0
+    - coverage >=3.6,<5.0
     - docopt >=0.6.1
     - python >=3.5
-    - pyyaml >=3.10
     - requests >=1.0.0
 
 test:
@@ -36,7 +34,7 @@ about:
   home: https://github.com/coveralls-clients/coveralls-python
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENCE
   summary: Show coverage stats online via coveralls.io
   description: |
     coveralls.io is a service for publishing your coverage stats online. This
