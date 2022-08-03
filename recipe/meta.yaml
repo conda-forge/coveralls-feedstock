@@ -21,7 +21,7 @@ requirements:
     - pip
     - python >=3.5
   run:
-    - coverage >=3.6
+    - coverage >=3.6,<5.0
     - docopt >=0.6.1
     - python >=3.5
     - requests >=1.0.0
