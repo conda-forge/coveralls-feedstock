@@ -20,24 +20,25 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
-    - setuptools
+    - poetry-core >=1.0.0
+    - python >=3.8, <3.13
   run:
     - coverage[toml] >=5.0, <7.5
     - docopt >=0.6.1, <0.7.0
-    - python >=3.8
+    - python >=3.8, <3.13
     - pyyaml >=3.10, <7.0
     - requests >=1.0.0, <3.0.0
 
 test:
   commands:
     - coveralls --help
+    - python-coveralls --help
 
 about:
   home: https://github.com/coveralls-clients/coveralls-python
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.rst
   summary: Show coverage stats online via coveralls.io
   description: |
     coveralls.io is a service for publishing your coverage stats online. This
