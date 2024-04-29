@@ -1,5 +1,5 @@
 {% set name = "coveralls" %}
-{% set version = "3.3.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b32a8bb5d2df585207c119d6c01567b81fba690c9c10a753bfe27a335bfc43ea
+  sha256: 9486f353176d309066053d38edbade3aad6346c5eb8a5edde7090d3116219414
 
 build:
   noarch: python
@@ -15,28 +15,30 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - coveralls = coveralls.cli:main
+    - python-coveralls = coveralls.cli:main
 
 requirements:
   host:
     - pip
-    - python >=3.5
-    - setuptools
+    - poetry-core >=1.0.0
+    - python >=3.8, <3.13
   run:
-    - coverage >=4.1, <7.0
-    - docopt >=0.6.1
-    - python >=3.5
-    - pyyaml >=3.10
-    - requests >=1.0.0
+    - coverage[toml] >=5.0, <7.5
+    - docopt >=0.6.1, <0.7.0
+    - python >=3.8, <3.13
+    - pyyaml >=3.10, <7.0
+    - requests >=1.0.0, <3.0.0
 
 test:
   commands:
     - coveralls --help
+    - python-coveralls --help
 
 about:
   home: https://github.com/coveralls-clients/coveralls-python
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.rst
   summary: Show coverage stats online via coveralls.io
   description: |
     coveralls.io is a service for publishing your coverage stats online. This
