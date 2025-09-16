@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - coveralls = coveralls.cli:main
@@ -25,7 +25,7 @@ requirements:
   run:
     - coverage[toml] >=5.0, <8.0
     - docopt >=0.6.1, <0.7.0
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - pyyaml >=3.10, <7.0
     - requests >=1.0.0, <3.0.0
 
