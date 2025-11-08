@@ -1,0 +1,63 @@
+schema_version: 1
+
+context:
+  name: coveralls
+  version: 4.0.2
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 7c21ffa2808d3052fa0cfca3842a9f3d21cc8eada02538c192d932199e5f07d4
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - coveralls = coveralls.cli:main
+      - python-coveralls = coveralls.cli:main
+
+requirements:
+  host:
+    - pip
+    - poetry-core >=1.0.0
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - coverage >=5.0,<8.0,!=6.0.*,!=6.1,!=6.1.1
+    - docopt >=0.6.1,<0.7.0
+    - requests >=1.0.0,<3.0.0
+    # From coverage[toml]
+    - tomli
+
+tests:
+  - python:
+      imports:
+        - coveralls
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}
+    script:
+      - coveralls --help
+      - python-coveralls --help
+
+about:
+  license: MIT
+  license_file: LICENSE.rst
+  summary: Show coverage stats online via coveralls.io
+  description: |
+    coveralls.io is a service for publishing your coverage stats online. This
+    package provides seamless integration with coverage.py (and thus py.test,
+    nosetests, etc...) in your Python projects.
+  homepage: https://github.com/coveralls-clients/coveralls-python
+
+extra:
+  recipe-maintainers:
+    - thewchan
+    - thekevjames
