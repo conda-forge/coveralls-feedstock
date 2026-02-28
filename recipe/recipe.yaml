@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: coveralls
-  version: 4.0.2
+  version: "4.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7c21ffa2808d3052fa0cfca3842a9f3d21cc8eada02538c192d932199e5f07d4
+  sha256: dab364025ba80cbb95ce56c6fc62cd9172d7fd637060ea235dde99d9b46a4494
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
